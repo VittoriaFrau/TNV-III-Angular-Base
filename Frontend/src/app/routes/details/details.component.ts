@@ -10,7 +10,8 @@ import { CovidData } from 'src/app/models/data.model';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private dataService: DataService, private router : Router) { }
+  constructor(private route: ActivatedRoute, private dataService: DataService, 
+    private router : Router) { }
 
   dataEntry: CovidData;
   id: number;
@@ -30,7 +31,7 @@ export class DetailsComponent implements OnInit {
     this.dataService.deleteEntry(this.id)
     .subscribe(data => {
       this.router.navigate(['/dashboard']);
-      console.log("deleted");
+      console.log("deleted: ", data);
     }, (err) => {
       console.log(err);
     });

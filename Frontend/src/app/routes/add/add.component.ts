@@ -24,7 +24,7 @@ export class AddComponent implements OnInit {
   onSubmit(form : NgForm){
     this.dataEntry = form.form.value;
     console.log(this.dataEntry);
-    
+
     this.dataService.addEntry(this.dataEntry).subscribe(response => {
       console.log(response);
       this.router.navigate(['/dashboard']);
