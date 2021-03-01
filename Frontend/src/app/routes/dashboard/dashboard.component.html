@@ -1,10 +1,19 @@
-<div class="container p-5">
+<div class="container p-5" *ngIf="covidDataLoader">
   <h1 class="text-center mb-5">
     Covid-21 Tracker
   </h1>
 
   <div class="text-right">
-    <button class="btn btn-primary mb-3" [routerLink]='["/add"]'>New</button>
+    
+    <button type="button"  style="font-size: 30px" class="btn btn-default" aria-label="Left Align" [routerLink]='["/add"]'>
+      <span class="fas fa-plus" aria-hidden="true"></span>
+      </button>
+  
+    <button class="btn btn-primary mb-3" [routerLink]='["/filterdouble"]'>Filter Double</button>
+    <button class="btn btn-primary mb-3" [routerLink]='["/sortingbydeath"]'>Sort by death</button>
+    <button class="btn btn-primary mb-3" [routerLink]='["/sortBy"]'>Sort by </button>
+    <button class="btn btn-primary mb-3" [routerLink]='["/filterByCountry"]'>Filter By Country</button>
+
   </div>
 
   <table class="table">
@@ -27,3 +36,4 @@
   </table>
 
 </div>
+<app-loadingpage *ngIf="!covidDataLoader" ></app-loadingpage>

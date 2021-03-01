@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
+  covidDataLoader=false;
   constructor( private dataService: DataService, private router : Router) { }
 
   ngOnInit(): void {
@@ -21,7 +22,10 @@ export class DashboardComponent implements OnInit {
   getEntries(){
     this.dataService.getData().subscribe( (response : any) => {
       this.covidData = response;
+      this.covidDataLoader=true;
     })
+    
+    
   }
 
   goToDetails(id){

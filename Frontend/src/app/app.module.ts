@@ -13,6 +13,14 @@ import { FormsModule } from '@angular/forms';
 import { EditComponent } from './routes/edit/edit.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FilterDoubleComponent } from './routes/filter-double/filter-double.component';
+import { ContinentclassificationPipe } from './pipes/continentclassification.pipe';
+import { SortingbydeathComponent } from './routes/sortingbydeath/sortingbydeath.component';
+import { SortByComponent } from './routes/sort-by/sort-by.component';
+import { WelcomepageComponent } from './routes/welcomepage/welcomepage.component';
+import { FilterbycountryComponent } from './routes/filterbycountry/filterbycountry.component';
+import { CountryPipe } from './pipes/country.pipe';
+import { LoadingpageComponent } from './components/loadingpage/loadingpage.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +31,14 @@ import { FooterComponent } from './components/footer/footer.component';
     EditComponent,
     HeaderComponent,
     FooterComponent,
+    FilterDoubleComponent,
+    ContinentclassificationPipe,
+    SortingbydeathComponent,
+    SortByComponent,
+    LoadingpageComponent,
+    WelcomepageComponent,
+    FilterbycountryComponent,
+    CountryPipe
   ],
   imports: [
     BrowserModule,
