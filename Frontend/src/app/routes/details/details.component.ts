@@ -34,7 +34,9 @@ export class DetailsComponent implements OnInit {
       console.log("deleted: ", data);
     }, (err) => {
       console.log(err);
+      this.router.navigate(['/dashboard']);
     });
-    this.router.navigate(['/dashboard']);
+    //this.router.navigate(['/dashboard']);
+
   }
 }

@@ -21,6 +21,8 @@ import { WelcomepageComponent } from './routes/welcomepage/welcomepage.component
 import { FilterbycountryComponent } from './routes/filterbycountry/filterbycountry.component';
 import { CountryPipe } from './pipes/country.pipe';
 import { LoadingpageComponent } from './components/loadingpage/loadingpage.component';
+import { ApiserviceService } from './services/apiservice.service';
+import { ApiComponent } from './routes/api/api.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { LoadingpageComponent } from './components/loadingpage/loadingpage.compo
     LoadingpageComponent,
     WelcomepageComponent,
     FilterbycountryComponent,
-    CountryPipe
+    CountryPipe,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,7 @@ import { LoadingpageComponent } from './components/loadingpage/loadingpage.compo
     HttpClientModule,
     FormsModule
   ],
-  providers: [DataService],
+  providers: [DataService, ApiserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

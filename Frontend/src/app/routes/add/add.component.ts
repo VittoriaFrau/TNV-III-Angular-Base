@@ -14,6 +14,7 @@ export class AddComponent implements OnInit {
   constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
   dataEntry : CovidData
@@ -23,11 +24,16 @@ export class AddComponent implements OnInit {
 
   onSubmit(form : NgForm){
     this.dataEntry = form.form.value;
+    console.log(form)
     console.log(this.dataEntry);
 
     this.dataService.addEntry(this.dataEntry).subscribe(response => {
       console.log(response);
       this.router.navigate(['/dashboard']);
-    })
+    },
+    (err) => {
+      //fai qualcosa
+    }
+    )
   }
 }

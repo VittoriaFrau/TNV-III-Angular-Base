@@ -13,6 +13,7 @@
     <button class="btn btn-primary mb-3" [routerLink]='["/sortingbydeath"]'>Sort by death</button>
     <button class="btn btn-primary mb-3" [routerLink]='["/sortBy"]'>Sort by </button>
     <button class="btn btn-primary mb-3" [routerLink]='["/filterByCountry"]'>Filter By Country</button>
+    <button class="btn btn-primary mb-3" [routerLink]='["/apicorona"]'>Api</button>
 
   </div>
 
@@ -34,6 +35,5 @@
       </tr>
     </tbody>
   </table>
-
 </div>
 <app-loadingpage *ngIf="!covidDataLoader" ></app-loadingpage>

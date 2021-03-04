@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
   }
 
   public covidData: CovidData [];
+  countries;
 
   getEntries(){
     this.dataService.getData().subscribe( (response : any) => {
@@ -31,5 +32,7 @@ export class DashboardComponent implements OnInit {
   goToDetails(id){
     this.router.navigateByUrl('/details/' + id);
   }
+
+  
 
 }
